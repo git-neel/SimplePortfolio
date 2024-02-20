@@ -89,3 +89,25 @@ typewriterElements.forEach((element) => {
     observer.observe(element);
   }
 });
+
+
+// // Define an array of font families to cycle through
+ const fontFamilies = ["Courier New", "Chalkboard", "Chalkboard SE", "Apple Color Emoji", "Charter",
+"Comic Sans MS"];
+
+
+// Function to change the font family
+function changeFontFamily() {
+  // Get a random font family from the array
+  const randomIndex = Math.floor(Math.random() * fontFamilies.length);
+  const randomFontFamily = fontFamilies[randomIndex];
+
+  // Set the font family of the body element
+  document.body.style.fontFamily = randomFontFamily;
+}
+
+// Call the function initially
+changeFontFamily();
+
+// Set an interval to change the font family every 10 seconds
+setInterval(changeFontFamily, 10000); // 10000 milliseconds = 10 seconds
